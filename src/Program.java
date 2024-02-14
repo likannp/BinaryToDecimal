@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,6 +41,20 @@ public class Program {
                 completeSequence.append(entry);
             }
         }
+        int cont = completeSequence.length() - 1;
+        List<Integer> decimal = new ArrayList<>();
+        for (int i = 0; i < completeSequence.length(); i++) {
+            char c = completeSequence.charAt(i);
+            int value = c - '0';
+            int result = value * (int) Math.pow(2, cont);
+            decimal.add(result);
+            cont--;
+        }
+        int soma = 0;
+        for (int valor : decimal) {
+            soma += valor;
+        }
+        System.out.println(soma + " decimais");
 
         System.out.println("Individual bits entered: " + binaries);
 
