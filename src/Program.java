@@ -50,11 +50,11 @@ public class Program {
             decimal.add(result);
             cont--;
         }
-        int soma = 0;
-        for (int valor : decimal) {
-            soma += valor;
+        int sum = 0;
+        for (int value : decimal) {
+            sum += value;
         }
-        System.out.println(soma + " decimais");
+        System.out.println(sum + " decimals");
 
         System.out.println("Individual bits entered: " + binaries);
 
